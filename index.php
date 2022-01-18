@@ -43,14 +43,18 @@ foreach ($array as $item) {
  * 5. Trouvez une solution pour afficher à l'aide d'un simple echo l'extension du fichier index.php
  */
 // TODO Votre code ici
-
-
+echo nl2br(file_get_contents('monFichierLorem.txt')) . "<br>";
 
 /**
  * 6. Testez si le fichier 'toto' existe, sil n'existe pas, afficher un texte distant que ce fichier n'existe pas !
  */
 // TODO Votre code ici.
-
+if (file_exists('toto.txt')) {
+    echo "Le fichier toto.txt existe !";
+}
+else {
+    echo "Le fichier toto.txt n'existe pas !";
+}
 
 /**
  * Super bonus.
