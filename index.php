@@ -7,6 +7,9 @@
  */
 // TODO Votre code ici.
 
+$lorem = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur consectetur et magnam necessitatibus neque nesciunt quis reiciendis totam, ullam.";
+file_put_contents('monFichierLorem.txt', $lorem);
+
 
 /**
  * 3. Créez un tableau contenant au moins 10 chaînes de caractère au choix.
@@ -15,6 +18,25 @@
  * --> Attention: les chaînes de caractères doivent s'ajouter à la suite du contenu déjà existant, pas d'écrasement.
  */
 // TODO Votre code ici
+
+$array = [
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+    "Ten",
+];
+
+foreach ($array as $item) {
+    $file = fopen('monFichierLorem.txt', 'a+');
+    file_put_contents('monFichierLorem.txt', "\n" . $item, FILE_APPEND);
+    fclose($file);
+}
 
 
 /**
